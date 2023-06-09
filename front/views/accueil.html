@@ -1,0 +1,50 @@
+<header id="header">
+    <nav class="navbar navbar-expand-lg" style="background: #688354">
+        <div class="container-fluid">
+            <img class="navbar-brand" src="/front/ressources/logo.png" width="65">
+            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarText">
+            <span class="navbar-text ml-auto">
+                <i class="fa-solid fa-user fa-xl" style="margin: 20px" onclick="navigate('modifCompte')"></i>
+            </span>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="main">
+    <div>
+        <div style="margin: 50px; color: black; font-weight: bold; font-size: 40px">
+            bonjour <span id="username"> </span>, vous avez <span id="point"></span> points.
+        </div>
+
+        <div id="divCards">
+        </div>
+
+        <div style="text-align: center">
+            <button style="margin: 20px" class="btn btn-secondary btn-lg" onclick="accueil.creerCommande()"> Valider </button>
+            <button style="margin: 20px" class="btn btn-secondary btn-lg">  Vider le panier </button>
+        </div>
+
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="accueil.closePopup()"><i class="fas fa-times"></i></span>
+                <h2 style="color: black">Ajouter le menu <span id="numeroMenu"></span> à la commande ?</h2>
+                <div style="margin: 15px; color: black">
+                    <div id="txtBoisson">Boisson : </div>
+                <select id="choixBoisson">
+                    <option value="Coca-Cola">Coca-Cola</option>
+                    <option value="MayTea" selected>MayTea</option>
+                    <option value="Eau">Eau</option>
+                </select>
+                </div>
+                <button style="padding: 5px" id="boutonConfirmer" onclick="accueil.creerCommandeCache(document.getElementById('numeroMenu').textContent)">confirmer</button>
+                <button style="padding: 5px" onclick="accueil.closePopup()">annuler</button>
+            </div>
+        </div>
+    </div>
+</main>
+<footer id="footer">
+    <i class="fa-solid fa-fork-knife" width="40"></i>
+</footer>
+
+

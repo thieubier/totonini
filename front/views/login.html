@@ -1,0 +1,26 @@
+<header id="header">
+    <a id="totonini">toto & nini </a>
+</header>
+<main class="container w-25">
+    <div class="card" id="cardLogin">
+        <div id="form">
+            <div style="margin-top: 20%">
+                <input type="text" class="form-control input" id="username" placeholder="username">
+                <input type="password" class="form-control input" id="password" placeholder="password">
+                <div id="divErreur" style="display: none">incorrect username or password</div>
+            </div>
+            <div id="divboutonLogin">
+                <button class="btn btn-primary" id="bouton" onclick="login.login()">connect</button>
+            </div>
+        </div>
+        <a id="boutonCreerCompte" onclick="navigate('creerCompte')"> create account</a>
+        <div id="divReseaux" style="margin-top: 90px">
+            <img class="logoReseau" src="https://img.icons8.com/ios-glyphs/60/null/instagram-new.png"/>
+            <img class="logoReseau" src="https://img.icons8.com/ios-glyphs/60/null/facebook.png"/>
+            <img class="logoReseau" src="https://img.icons8.com/ios-glyphs/60/null/gmail.png"/>
+        </div>
+    </div>
+    <div id="divLogo">
+        <img id="logo" src="/front/ressources/logo.png" width="65"/>
+    </div>
+</main>

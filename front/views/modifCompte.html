@@ -1,0 +1,33 @@
+<header id="header">
+    <a onclick="navigate('accueil')" id="totonini">toto & nini </a>
+</header>
+<main class="container w-25">
+    <div class="card" id="cardLogin">
+        <div style="text-align: center">
+        <H3 class="displayed" style="color: black"> Modifier mes informations</H3>
+        </div>
+        <div id="form">
+            <div style="margin-top: 20%">
+                <input type="text" class="form-control input" id="username" placeholder="username">
+                <input type="password" class="form-control input" id="password" placeholder="password">
+                <div id="divErreur" style="display: none">incorrect username or password</div>
+            </div>
+            <div style="text-align: center" id="divboutonModif">
+                <button class="btn btn-primary" id="bouton" onclick="modifCompte.updateUser()">modifier</button>
+                <button class="btn btn-danger" style="margin: 10px" onclick="modifCompte.openPopUp()">Supprimer mon compte</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="modifCompte.closePopup()"><i class="fas fa-times"></i></span>
+            <h2 style="color: black">Êtes-vous sûr de vouloir supprimer votre compte ?</h2>
+            <button style="padding: 5px" id="boutonConfirmer" onclick="modifCompte.deleteUser()">confirmer</button>
+            <button style="padding: 5px" onclick="accueil.closePopup()">annuler</button>
+        </div>
+    </div>
+    <div id="divLogo">
+        <img id="logo" src="/front/ressources/logo.png" width="65"/>
+    </div>
+</main>
